@@ -448,7 +448,7 @@ static unsigned int ser_access_read(unsigned long addr)
 
 	return val;
 }
-
+EXPORT_SYMBOL(ser_access_read);
 static int ser_access_write(unsigned long addr, unsigned long data)
 {
 	unsigned long flags;
@@ -460,7 +460,7 @@ static int ser_access_write(unsigned long addr, unsigned long data)
 
 	return 0;
 }
-
+EXPORT_SYMBOL(ser_access_write);
 /***************************************************************************/
 int rtc_reset_gpo(struct device *dev, unsigned level)
 {
@@ -530,7 +530,7 @@ int rtc_set_alarm_aml(struct device *dev, struct alarm_data_t *alarm_data)
 
 	return 0;
 }
-
+EXPORT_SYMBOL(rtc_set_alarm_aml);
 /*************************************************************************/
 
 
