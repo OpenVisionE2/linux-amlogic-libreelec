@@ -608,7 +608,7 @@ u32 amvideo_get_scaler_para(int *x, int *y, int *w, int *h, u32 *ratio)
 	/* *ratio = 100; */
 	return video_scaler_mode;
 }
-
+EXPORT_SYMBOL(amvideo_get_scaler_para);
 void amvideo_set_scaler_para(int x, int y, int w, int h, int flag)
 {
 	mutex_lock(&video_module_mutex);
@@ -630,7 +630,7 @@ void amvideo_set_scaler_para(int x, int y, int w, int h, int flag)
 	mutex_unlock(&video_module_mutex);
 	return;
 }
-
+EXPORT_SYMBOL(amvideo_set_scaler_para);
 u32 amvideo_get_scaler_mode(void)
 {
 	return video_scaler_mode;
