@@ -2429,7 +2429,7 @@ void vpp_set_video_layer_position(s32 x, s32 y, s32 w, s32 h)
 	video_layer_width = w;
 	video_layer_height = h;
 }
-
+EXPORT_SYMBOL(vpp_set_video_layer_position);
 void vpp_get_video_layer_position(s32 *x, s32 *y, s32 *w, s32 *h)
 {
 	*x = video_layer_left;
@@ -2437,7 +2437,7 @@ void vpp_get_video_layer_position(s32 *x, s32 *y, s32 *w, s32 *h)
 	*w = video_layer_width;
 	*h = video_layer_height;
 }
-
+EXPORT_SYMBOL(vpp_get_video_layer_position);
 void vpp_set_global_offset(s32 x, s32 y)
 {
 	video_layer_global_offset_x = x;
