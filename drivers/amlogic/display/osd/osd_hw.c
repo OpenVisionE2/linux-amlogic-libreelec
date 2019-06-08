@@ -931,12 +931,12 @@ void  osd_set_gbl_alpha_hw(u32 index, u32 gbl_alpha)
 		osd_wait_vsync_hw();
 	}
 }
-
+EXPORT_SYMBOL(osd_set_gbl_alpha_hw);
 u32 osd_get_gbl_alpha_hw(u32  index)
 {
 	return osd_hw.gbl_alpha[index];
 }
-
+EXPORT_SYMBOL(osd_get_gbl_alpha_hw);
 void osd_set_color_key_hw(u32 index, u32 color_index, u32 colorkey)
 {
 	u8 r = 0, g = 0, b = 0, a = (colorkey & 0xff000000) >> 24;
@@ -1292,7 +1292,7 @@ void osd_get_free_scale_enable_hw(u32 index, u32 *free_scale_enable)
 {
 	*free_scale_enable = osd_hw.free_scale_enable[index];
 }
-
+EXPORT_SYMBOL(osd_get_free_scale_enable_hw);
 void osd_set_free_scale_mode_hw(u32 index, u32 freescale_mode)
 {
 	osd_hw.free_scale_mode[index] = freescale_mode;
@@ -1304,7 +1304,7 @@ void osd_get_free_scale_mode_hw(u32 index, u32 *freescale_mode)
 {
 	*freescale_mode = osd_hw.free_scale_mode[index];
 }
-
+EXPORT_SYMBOL(osd_get_free_scale_mode_hw);
 void osd_set_4k2k_fb_mode_hw(u32 fb_for_4k2k)
 {
 	osd_hw.fb_for_4k2k = fb_for_4k2k;
@@ -1315,13 +1315,13 @@ void osd_get_free_scale_width_hw(u32 index, u32 *free_scale_width)
 	*free_scale_width = osd_hw.free_src_data_backup[index].x_end -
 		osd_hw.free_src_data_backup[index].x_start + 1;
 }
-
+EXPORT_SYMBOL(osd_get_free_scale_width_hw);
 void osd_get_free_scale_height_hw(u32 index, u32 *free_scale_height)
 {
 	*free_scale_height = osd_hw.free_src_data_backup[index].y_end -
 		osd_hw.free_src_data_backup[index].y_start + 1;
 }
-
+EXPORT_SYMBOL(osd_get_free_scale_height_hw);
 void osd_get_free_scale_axis_hw(u32 index, s32 *x0, s32 *y0, s32 *x1, s32 *y1)
 {
 	*x0 = osd_hw.free_src_data_backup[index].x_start;
@@ -1329,7 +1329,7 @@ void osd_get_free_scale_axis_hw(u32 index, s32 *x0, s32 *y0, s32 *x1, s32 *y1)
 	*x1 = osd_hw.free_src_data_backup[index].x_end;
 	*y1 = osd_hw.free_src_data_backup[index].y_end;
 }
-
+EXPORT_SYMBOL(osd_get_free_scale_axis_hw);
 void osd_set_free_scale_axis_hw(u32 index, s32 x0, s32 y0, s32 x1, s32 y1)
 {
 	osd_hw.free_src_data[index].x_start = x0;
@@ -1351,7 +1351,7 @@ void osd_get_scale_axis_hw(u32 index, s32 *x0, s32 *y0, s32 *x1, s32 *y1)
 	*y0 = osd_hw.scaledata[index].y_start;
 	*y1 = osd_hw.scaledata[index].y_end;
 }
-
+EXPORT_SYMBOL(osd_get_scale_axis_hw);
 void osd_set_scale_axis_hw(u32 index, s32 x0, s32 y0, s32 x1, s32 y1)
 {
 	osd_hw.scaledata[index].x_start = x0;
@@ -1394,7 +1394,7 @@ void osd_get_window_axis_hw(u32 index, s32 *x0, s32 *y0, s32 *x1, s32 *y1)
 	*x0 = osd_hw.free_dst_data_backup[index].x_start;
 	*x1 = osd_hw.free_dst_data_backup[index].x_end;
 }
-
+EXPORT_SYMBOL(osd_get_window_axis_hw);
 void osd_set_window_axis_hw(u32 index, s32 x0, s32 y0, s32 x1, s32 y1)
 {
 	const struct vinfo_s *vinfo;
