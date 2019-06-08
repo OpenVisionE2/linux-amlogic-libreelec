@@ -140,7 +140,7 @@ int amports_get_debug_flags(void)
 #ifdef DATA_DEBUG
 #include <linux/fs.h>
 
-#define DEBUG_FILE_NAME     "/sdcard/debug.tmp"
+#define DEBUG_FILE_NAME     "/tmp/debug.tmp"
 static struct file *debug_filp;
 static loff_t debug_file_pos;
 
@@ -3812,7 +3812,7 @@ struct stream_buf_s *get_stream_buffer(int id)
 		return 0;
 	return &bufs[id];
 }
-EXPORT_SYMBOL_GPL(get_stream_buffer);
+EXPORT_SYMBOL(get_stream_buffer);
 
 static const struct of_device_id amlogic_mesonstream_dt_match[] = {
 	{
