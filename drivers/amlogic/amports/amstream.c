@@ -493,7 +493,7 @@ struct stream_buf_s *get_buf_by_type(u32 type)
 
 	return NULL;
 }
-
+EXPORT_SYMBOL(get_buf_by_type);
 unsigned char is_mult_inc(unsigned int type)
 {
 	unsigned char ret = 0;
@@ -1194,7 +1194,7 @@ static ssize_t amstream_mpts_write(struct file *file, const char *buf,
 	}
 	return r;
 }
-
+EXPORT_SYMBOL(amstream_mpts_write);
 static ssize_t amstream_mpps_write(struct file *file, const char *buf,
 					size_t count, loff_t *ppos)
 {
