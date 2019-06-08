@@ -224,7 +224,7 @@ u32 stbuf_level(struct stream_buf_s *buf)
 
 	return _READ_ST_REG(LEVEL);
 }
-
+EXPORT_SYMBOL(stbuf_level);
 u32 stbuf_rp(struct stream_buf_s *buf)
 {
 	if ((buf->type == BUF_TYPE_HEVC) || (buf->type == BUF_TYPE_VIDEO)) {
